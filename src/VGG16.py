@@ -3,7 +3,7 @@ import os
 
 import numpy as np
 import tensorflow as tf
-from utils.utils import gaussian_kernel
+from src.utils.utils import gaussian_kernel
 
 VGG_MEAN = [103.939, 116.779, 123.68]
 
@@ -17,7 +17,7 @@ class VGG16mo:
             vgg16_npy_path = path
             #print(path)
 
-        self.data_dict = np.load(vgg16_npy_path, encoding='latin1').item()
+        self.data_dict = np.load(vgg16_npy_path, encoding='latin1', allow_pickle=True).item()
         #print("npy file loaded")
 
     def build(self, bgr):

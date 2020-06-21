@@ -4,11 +4,11 @@ import gc
 
 import numpy as np
 import tensorflow as tf
-from VGG16 import VGG16mo
-from utils.utils import *
+from src.VGG16 import VGG16mo
+from src.utils.utils import *
 import cv2
 from lap import lapjv
-from utils.shape_context import ShapeContext
+from src.utils.shape_context import ShapeContext
 import matplotlib.pyplot as plt
 
 class CNN(object):
